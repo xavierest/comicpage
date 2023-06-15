@@ -1,3 +1,12 @@
+import { HomeCarousel } from "../components/HomeCarousel";
+import data from "../data/data.json";
+
 export function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div className="containerCarousel">
+      {data.map((person) => {
+        return <HomeCarousel {...person} />;
+      })}
+    </div>
+  );
 }
