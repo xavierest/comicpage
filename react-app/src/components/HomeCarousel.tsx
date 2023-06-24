@@ -1,15 +1,73 @@
-import { Carousel, Container } from "react-bootstrap";
+import { Carousel, Card, Row, Col } from "react-bootstrap";
 
-type HomeCarouselProps = {
-  name: string;
-  img: string;
-};
-
-export function HomeCarousel({ name, img }: HomeCarouselProps) {
+export function HomeCarousel() {
   return (
-    <div className="card">
-      <img src={img} alt={name} />
-      <h2>{name}</h2>
-    </div>
+    <Carousel>
+      <Carousel.Item>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+              {/* <div className="card-img-overlay">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p className="card-text">Last updated 3 mins ago</p>
+              </div>  */}
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+            </Card>
+          </Col>
+        </Row>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="https://i.ytimg.com/vi/HG8tWasSL6I/maxresdefault.jpg"
+              />
+            </Card>
+          </Col>
+        </Row>
+      </Carousel.Item>
+    </Carousel>
   );
 }
